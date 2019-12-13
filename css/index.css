@@ -128,13 +128,17 @@ table {
 }
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  border: 1px solid grey;
 }
 html {
   font-size: 62.5%;
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #5e6164;
 }
 h1,
@@ -142,7 +146,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   color: #23293b;
 }
 h2 {
@@ -198,12 +202,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 500px) {
-  .home .intro {
-    width: 95%;
-    margin-left: 2.5%;
-  }
-}
 .home .intro h2 {
   padding: 15px;
 }
@@ -250,10 +248,26 @@ footer {
   .home .walk {
     display: flex;
     flex-flow: column-reverse wrap;
+    padding: 5% 2.5% 2.5% 5%;
+    margin-top: 5%;
+  }
+  .home .walk .walk-img {
+    width: 100%;
+  }
+  .home .walk .walk-img img {
+    width: 100%;
+    border-radius: 8px;
   }
 }
 .home .walk .walk-text {
   width: 50%;
+  border: 1px solid white;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 95%;
+    margin-top: 5%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -280,16 +294,16 @@ footer {
   .home .walk .walk-text .btn {
     font-size: 1.7rem;
     border: 1px solid black;
-    width: 95%;
+    width: 100%;
     text-align: center;
-    padding: 3% 2%;
-    color: green;
-    background: white;
+    padding: 7% 2%;
+    color: white;
+    background: black;
     border-radius: 5px;
     font-weight: bold;
   }
   .home .walk .walk-text .btn:hover {
-    background: yellow;
+    background: white;
     color: black;
   }
 }
