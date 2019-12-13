@@ -135,7 +135,7 @@ html {
 html,
 body {
   font-family: 'Ubuntu', sans-serif;
-  color: #5E6164;
+  color: #5e6164;
 }
 h1,
 h2,
@@ -143,7 +143,7 @@ h3,
 h4,
 h5 {
   font-family: 'Russo One', sans-serif;
-  color: #23293B;
+  color: #23293b;
 }
 h2 {
   font-size: 3.2rem;
@@ -170,8 +170,8 @@ p {
 .navigation-home {
   text-align: center;
   padding-top: 2%;
-  background: #F1F1F1;
-  border: 1px solid #F1F1F1;
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
 }
 .navigation-home h1 {
   font-size: 4.5rem;
@@ -180,13 +180,13 @@ p {
   display: flex;
   justify-content: space-evenly;
   width: 80%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   margin: 3% 0 2% 10%;
 }
 .navigation-home nav a {
   font-size: 2rem;
   text-decoration: none;
-  color: #454A59;
+  color: #454a59;
 }
 footer {
   color: #22283B;
@@ -198,6 +198,12 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .home .intro {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -208,6 +214,15 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images .blast {
+    width: 95%;
+  }
+  .home .space-images .sky,
+  .home .space-images .launch {
+    display: none;
+  }
 }
 .home .space-images img {
   width: 28%;
@@ -231,6 +246,12 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-flow: column-reverse wrap;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
 }
@@ -251,11 +272,32 @@ footer {
   border-radius: 5px;
   font-weight: bold;
 }
-.home .walk .walk-img {
+.home .walk .walk-text .btn:hover {
+  background: white;
+  color: black;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    font-size: 1.7rem;
+    border: 1px solid black;
+    width: 95%;
+    text-align: center;
+    padding: 3% 2%;
+    color: green;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .home .walk .walk-text .btn:hover {
+    background: yellow;
+    color: black;
+  }
+}
+.home .walk .walk-text .walk-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .walk .walk-img img {
+.home .walk .walk-text .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;

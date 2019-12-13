@@ -2,6 +2,10 @@
 
 .home {
   .intro {
+    @media @mobile {
+      width: 95%;
+      margin-left: 2.5%;
+    }
     h2 {
       padding: 15px;
     }
@@ -15,7 +19,16 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @mobile {
+      .blast {
+        width: 95%;
+      }
 
+      .sky,
+      .launch {
+        display: none;
+      }
+    }
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -42,6 +55,10 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @mobile {
+      display: flex;
+      flex-flow: column-reverse wrap;
+    }
 
     .walk-text {
       width: 50%;
@@ -55,17 +72,21 @@
       }
 
       .btn {
-        
-    }
+        .button-shortcut(white, black, white, black);
+        @media @mobile {
+          .button-shortcut-mobile(green, white, yellow, black);
+        }
+      }
 
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
+      .walk-img {
+        width: 46%;
+        margin-left: 4%;
 
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
       }
     }
   }
