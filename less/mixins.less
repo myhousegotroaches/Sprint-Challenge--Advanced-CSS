@@ -1,1 +1,45 @@
 // Mixins Here
+
+.no-text-decor() {
+  text-decoration: none;
+}
+
+.pad-top() {
+  padding-top: 2%;
+}
+
+// parameter mix in
+
+.button-shortcut(@normal-text-color, @normal-bg, @hover-bg, @hover-text-color) {
+  font-size: 1.7rem;
+  border: 1px solid black;
+  width: 28%;
+  text-align: center;
+  padding: 3% 2%;
+  color: @normal-text-color;
+  background: @normal-bg;
+  border-radius: 5px;
+  font-weight: bold;
+
+  &:hover {
+    background: @hover-bg;
+    color: @hover-text-color;
+  }
+}
+
+.button-shortcut-mobile(@normal-text-color, @normal-bg, @hover-bg, @hover-text-color) {
+  font-size: 1.7rem;
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  padding: 7% 2%;
+  color: @normal-text-color;
+  background: @normal-bg;
+  border-radius: 5px;
+  font-weight: bold;
+
+  &:hover {
+    background: @hover-bg;
+    color: @hover-text-color;
+  }
+}
